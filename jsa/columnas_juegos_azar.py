@@ -15,10 +15,10 @@ for hoja in hojas_juegos_suerte:
     if hoja in datos_hojas:
         df = datos_hojas[hoja]["datos"]  # Obtener los datos de la hoja
         
-        # 📌 Eliminar columnas completamente vacías
+        #Eliminar columnas completamente vacías
         df = df.dropna(axis=1, how='all')
 
-        # 📌 Contar la frecuencia de cada columna
+        #Contar la frecuencia de cada columna
         for col in df.columns:
             conteo_columnas[col] = conteo_columnas.get(col, 0) + 1  # Sumar 1 cada vez que aparece
 

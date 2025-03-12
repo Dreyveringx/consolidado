@@ -18,7 +18,7 @@ diccionario_columnas_unicas = {"Columnas Únicas": columnas_unicas}
 print("\n📊 Columnas que aparecen SOLO en una hoja (sin repetirse en otras):")
 print(diccionario_columnas_unicas)
 
-"""# 📌 Guardar la lista en un archivo Excel
+"""#Guardar la lista en un archivo Excel
 df_columnas = pd.DataFrame(diccionario_columnas_unicas)
 df_columnas.to_excel("columnas_exclusivas.xlsx", index=False)
-print("\n✅ Archivo 'columnas_exclusivas.xlsx' generado con éxito.")"""
+print("\nArchivo 'columnas_exclusivas.xlsx' generado con éxito.")"""
