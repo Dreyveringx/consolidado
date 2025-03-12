@@ -39,3 +39,11 @@ print(diccionario_columnas_unicas)
 df_columnas = pd.DataFrame(diccionario_columnas_unicas)
 df_columnas.to_excel("columnas_exclusivas_juegos_azar.xlsx", index=False)
 print("\n✅ Archivo 'columnas_exclusivas_juegos_azar.xlsx' generado con éxito.")"""
+
+ruta_txt = "columnas_unicas_juegos_azar.txt"
+with open(ruta_txt, "w", encoding="utf-8") as f:
+    f.write("📊 Columnas que aparecen SOLO en una hoja de 'Juegos de Azar' (sin 'Unnamed'):\n\n")
+    for columna in columnas_unicas:
+        f.write(f"- {columna}\n")
+
+print(f"\n✅ Archivo '{ruta_txt}' generado con éxito.")
