@@ -1,4 +1,3 @@
-📊 Columnas que aparecen SOLO en una hoja (sin repetirse en otras):
 NOMBRE de colocador
 CANAL DE CONTRATACIÓN
 TIPO_USUARIO
