@@ -1,45 +1,170 @@
-import fasttext.util
 import numpy as np
 import pandas as pd
-import re
-import matplotlib.pyplot as plt
-from sklearn.cluster import DBSCAN
-from sklearn.manifold import TSNE
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
 
-# Cargar modelo de FastText en español
-fasttext.util.download_model('es', if_exists='ignore')
-ft = fasttext.load_model('cc.es.300.bin')
+# Lista de nombres de columnas (tu entrada)
+columnas = [
+    "NOMBRE de colocador",
+"CANAL DE CONTRATACIÓN",
+"TIPO_USUARIO",
+"CANAL TRANSACCIONAL",
+"CANTIDAD",
+"COMISION (sin signo pesos)",
+"FECHA_TRANSACCION",
+"PAGADOR_DOCUMENTO",
+"PAGADOR_NOMBRE",
+"VALOR_FACTURA",
+"COD_PUNTO",
+"CANAL.1",
+"NOMBRES  nombre de quien figura en la factura, o pagador)",
+"TIPO_USUARIO  (este campo se quita)?? Se confirmará por parte de desarrollo organizacional si se fija o o se elimina.",
+"ID  (transacción)pte confirmar.",
+"NUMERO_DOC",
+"PRIMER_APELLIDO",
+"SEGUNDO_APELLIDO",
+"VALOR_SUBSIDIO",
+"USUARIO  (Cédula del vendedor)  SII",
+"COD_OFICINA",
+"NOMBRES del beneficiario.",
+"APELLIDOS del beneficiario",
+"OFICINA DE PAGO  (pto de venta donde se paga) nombre de la oficina.",
+"pin",
+"consecutivo",
+"valor",
+"fecha",
+"hora",
+"nota",
+"GIRO_TIPO",
+"NOMBRE_PROVEEDOR",
+"informacion_remitente",
+"beneficiario",
+"agencia_origen",
+"agencia_destino",
+"agencia_pago",
+"login  identifación del cajero.",
+"NUMERO_COMPROBANTE",
+"estado",
+"proveedor",
+"1030700558",
+"20000",
+"740001",
+"1022371696",
+"50000",
+"52307294",
+"Unnamed: 0",
+"CORREO DEL CLIENTE",
+"DOCUMENTO CLIENTE",
+"NOMBRE CLIENTE",
+"SUB PRODUCTO",
+"COMPROBANTE INGRESO",
+"AGENCIA ",
+"CODIGO PRDUCTO",
+"FECHA TX2",
+"HORA TX3",
+"CODIGO VENDEDOR4",
+"CEDULA ASESORA5",
+"CODIGO DE ARRIENDO6",
+"TERMINAL7",
+"SPT8",
+"MUNICIPO9",
+"VALOR 10",
+"VALOR SIN IVA11",
+"ESTADO TX12",
+"ID TX13",
+"CJ",
+"CAJA",
+"COMPROBANTE",
+"FECHA COMPROBANTE ",
+"NOMBRE USUARIO",
+"EMISIÓN (APLICA PARA RASPATODO)",
+"PAGUE (APLICA PARA BALOTO)",
+"SERIE 2",
+"CODIGO BARRAS (LOTERÍAS-PROMOCIONALES-OTROS DISTRIBUIDORES)",
+"CODIGO DE SEGURIDAD14",
+"PIN15",
+"ENCARGADO",
+"PRODUCTO",
+"RUTA",
+"APLICATIVO",
+"CAMPOS DINAMICOS",
+"PREMIOS - PAGOS",
+"NOMBRE DISTRIBUIDOR",
+"FECHA_VENTA",
+"FECHA_SORTEO",
+"COD_USUARIO/ DEBE QUEDAR (CAJA PAGO)",
+"COD_LOTERIA",
+"NOM_LOTERÍA",
+"COD_SORTEO DEBE QUEDAR /(NUM_SORTEO)",
+"COD_BARRAS(COMPLETO)",
+"NUM_APOSTADO",
+"SERIE_APOSTADA",
+"NUM_FRACCIÓN",
+"SERIE2",
+"CANAL_VENTA (APP. FÍSICA, LÍNEA)",
+"TIPO_PREMIO",
+"TOTAL_PREMIO",
+"FECHA_PAGO",
+"HORA_PAGO",
+"DETALLE",
+"PROMOCIONALES PARA GELSA",
+"NOMBRE Y CODIGO DEL VENDEDOR ",
+"FECHA DE VENTA ",
+"CONCEPTO ",
+"RETENCIÓN ",
+"VENTA ",
+"IVA ",
+"BASE COMISIÓN ",
+"COMISIÓN NETA ",
+"RETENCION ",
+"COMISIÓN ",
+"ENTREGA ",
+"REPORTE",
+"Apertura caja sivem",
+"Id Transaccion",
+"Tipo Transaccion",
+"Codigo Oficina",
+"Usuario",
+"Tipo identificacion cliente",
+"Oficina",
+"Codigo de oficina ",
+"Zona ",
+"Terminal",
+"Usuario.1",
+"Canal ",
+"Codigo de arriendo",
+"Codigo de zona",
+"Nombres cliente",
+"Valor transaccion pesos",
+"Valor transaccion euros",
+"Valor transaccion dolares",
+"Fecha transaccion",
+"Nombre de la agencia ",
+"Hora transaccion",
+"Cajero",
+"NETO",
+"tipo transaccion",
+"ID TRANSACCION",
+"CRUCE CON SUPER",
+"CRUCE CON PSL",
 
-# 🔹 Cargar las columnas únicas desde el archivo
-with open("columnas_unicas.txt", "r", encoding="utf-8") as file:
-    columnas = [line.strip() for line in file.readlines()]
+]
 
-#Limpieza: Convertimos a minúsculas y eliminamos palabras comunes
-stop_words = ["nombre", "codigo", "usuario", "documento", "fecha", "hora"]
-columnas_limpias = [re.sub(r'_|-', ' ', col.lower()) for col in columnas]
-columnas_limpias = [' '.join([word for word in col.split() if word not in stop_words]) for col in columnas_limpias]
+# Convertimos los nombres a minúsculas para mejor procesamiento
+columnas = [col.lower() for col in columnas]
 
-#Generamos los embeddings con FastText
-vector_columnas = np.array([ft.get_sentence_vector(col) for col in columnas_limpias])
+# 1️⃣ Vectorización de texto usando TF-IDF
+vectorizer = TfidfVectorizer()
+X = vectorizer.fit_transform(columnas)
 
-#Aplicamos DBSCAN para clustering automático
-dbscan = DBSCAN(eps=3.5, min_samples=2, metric='cosine')
-clusters = dbscan.fit_predict(vector_columnas)
+# 2️⃣ Aplicamos K-Means para encontrar 5 clusters automáticamente
+num_clusters = 5  # Puedes ajustar este número
+kmeans = KMeans(n_clusters=num_clusters, random_state=42, n_init=10)
+clusters = kmeans.fit_predict(X)
 
-#Crear DataFrame con los resultados
+# 3️⃣ Crear un DataFrame con los resultados
 df_resultado = pd.DataFrame({"Columna": columnas, "Cluster": clusters})
+
+# 4️⃣ Mostrar los resultados ordenados por grupo
 df_resultado = df_resultado.sort_values("Cluster")
-
-# 🔹 Imprimir los resultados
 print(df_resultado)
-
-#Visualización con t-SNE
-tsne = TSNE(n_components=2, random_state=42)
-X_embedded = tsne.fit_transform(vector_columnas)
-
-plt.figure(figsize=(10, 6))
-plt.scatter(X_embedded[:, 0], X_embedded[:, 1], c=clusters, cmap="viridis", alpha=0.7)
-for i, txt in enumerate(columnas):
-    plt.annotate(txt, (X_embedded[i, 0], X_embedded[i, 1]), fontsize=9)
-plt.title("Clusters de Columnas con t-SNE y DBSCAN")
-plt.show()

@@ -15,6 +15,6 @@ columnas_unicas = [col for col, count in conteo_columnas.items() if count == 1]
 # Guardar la lista en un archivo TXT
 with open("columnas_unicas.txt", "w", encoding="utf-8") as file:
     for columna in columnas_unicas:
-        file.write(f"{columna}\n")
+        file.write(f'"{columna}",\n')
 
-print("\n✅ Archivo 'columnas_unicas.txt' generado con éxito.")
+print("\n✅ Archivo 'columnas-unicas.txt' generado con éxito.")

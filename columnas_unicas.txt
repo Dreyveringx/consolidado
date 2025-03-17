@@ -1,186 +1,186 @@
-NOMBRE de colocador
-CANAL DE CONTRATACIÓN
-TIPO_USUARIO
-CANAL TRANSACCIONAL
-CANTIDAD
-COMISION (sin signo pesos)
-FECHA_TRANSACCION
-PAGADOR_DOCUMENTO
-PAGADOR_NOMBRE
-VALOR_FACTURA
-COD_PUNTO
-CANAL.1
-NOMBRES  nombre de quien figura en la factura, o pagador)
-TIPO_USUARIO  (este campo se quita)?? Se confirmará por parte de desarrollo organizacional si se fija o o se elimina.
-ID  (transacción)pte confirmar.
-NUMERO_DOC
-PRIMER_APELLIDO
-SEGUNDO_APELLIDO
-VALOR_SUBSIDIO
-USUARIO  (Cédula del vendedor)  SII
-COD_OFICINA
-NOMBRES del beneficiario.
-APELLIDOS del beneficiario
-OFICINA DE PAGO  (pto de venta donde se paga) nombre de la oficina.
-pin
-consecutivo
-valor
-fecha
-hora
-nota
-GIRO_TIPO
-NOMBRE_PROVEEDOR
-informacion_remitente
-beneficiario
-agencia_origen
-agencia_destino
-agencia_pago
-login  identifación del cajero.
-NUMERO_COMPROBANTE
-estado
-proveedor
-1030700558
-20000
-740001
-1022371696
-50000
-52307294
-Unnamed: 0
-CORREO DEL CLIENTE
-DOCUMENTO CLIENTE
-NOMBRE CLIENTE
-SUB PRODUCTO
-COMPROBANTE INGRESO
-AGENCIA 
-CODIGO PRDUCTO
-FECHA TX2
-HORA TX3
-CODIGO VENDEDOR4
-CEDULA ASESORA5
-CODIGO DE ARRIENDO6
-TERMINAL7
-SPT8
-MUNICIPO9
-VALOR 10
-VALOR SIN IVA11
-ESTADO TX12
-ID TX13
-CJ
-CAJA
-COMPROBANTE
-FECHA COMPROBANTE 
-NOMBRE USUARIO
-EMISIÓN (APLICA PARA RASPATODO)
-PAGUE (APLICA PARA BALOTO)
-SERIE 2
-CODIGO BARRAS (LOTERÍAS-PROMOCIONALES-OTROS DISTRIBUIDORES)
-CODIGO DE SEGURIDAD14
-PIN15
-ENCARGADO
-PRODUCTO
-RUTA
-APLICATIVO
-CAMPOS DINAMICOS
-Unnamed: 3
-Unnamed: 4
-Unnamed: 5
-Unnamed: 6
-Unnamed: 7
-Unnamed: 8
-Unnamed: 9
-Unnamed: 10
-Unnamed: 11
-Unnamed: 12
-Unnamed: 13
-Unnamed: 14
-Unnamed: 20
-Unnamed: 21
-Unnamed: 22
-Unnamed: 23
-Unnamed: 24
-Unnamed: 25
-PREMIOS - PAGOS
-Unnamed: 27
-Unnamed: 28
-Unnamed: 29
-Unnamed: 30
-Unnamed: 31
-Unnamed: 32
-Unnamed: 33
-Unnamed: 34
-Unnamed: 35
-Unnamed: 36
-Unnamed: 37
-Unnamed: 38
-Unnamed: 39
-Unnamed: 40
-Unnamed: 41
-Unnamed: 42
-Unnamed: 43
-Unnamed: 44
-Unnamed: 45
-Unnamed: 46
-Unnamed: 47
-Unnamed: 48
-Unnamed: 49
-Unnamed: 50
-Unnamed: 51
-Unnamed: 52
-NOMBRE DISTRIBUIDOR
-FECHA_VENTA
-FECHA_SORTEO
-COD_USUARIO/ DEBE QUEDAR (CAJA PAGO)
-COD_LOTERIA
-NOM_LOTERÍA
-COD_SORTEO DEBE QUEDAR /(NUM_SORTEO)
-COD_BARRAS(COMPLETO)
-NUM_APOSTADO
-SERIE_APOSTADA
-NUM_FRACCIÓN
-SERIE2
-CANAL_VENTA (APP. FÍSICA, LÍNEA)
-TIPO_PREMIO
-TOTAL_PREMIO
-FECHA_PAGO
-HORA_PAGO
-DETALLE
-PROMOCIONALES PARA GELSA
-NOMBRE Y CODIGO DEL VENDEDOR 
-FECHA DE VENTA 
-CONCEPTO 
-RETENCIÓN 
-VENTA 
-IVA 
-BASE COMISIÓN 
-COMISIÓN NETA 
-RETENCION 
-COMISIÓN 
-ENTREGA 
-REPORTE
-Apertura caja sivem
-Id Transaccion
-Tipo Transaccion
-Codigo Oficina
-Usuario
-Tipo identificacion cliente
-Oficina
-Codigo de oficina 
-Zona 
-Terminal
-Usuario.1
-Canal 
-Codigo de arriendo
-Codigo de zona
-Nombres cliente
-Valor transaccion pesos
-Valor transaccion euros
-Valor transaccion dolares
-Fecha transaccion
-Nombre de la agencia 
-Hora transaccion
-Cajero
-NETO
-tipo transaccion
-ID TRANSACCION
-CRUCE CON SUPER
-CRUCE CON PSL
+"NOMBRE de colocador",
+"CANAL DE CONTRATACIÓN",
+"TIPO_USUARIO",
+"CANAL TRANSACCIONAL",
+"CANTIDAD",
+"COMISION (sin signo pesos)",
+"FECHA_TRANSACCION",
+"PAGADOR_DOCUMENTO",
+"PAGADOR_NOMBRE",
+"VALOR_FACTURA",
+"COD_PUNTO",
+"CANAL.1",
+"NOMBRES  nombre de quien figura en la factura, o pagador)",
+"TIPO_USUARIO  (este campo se quita)?? Se confirmará por parte de desarrollo organizacional si se fija o o se elimina.",
+"ID  (transacción)pte confirmar.",
+"NUMERO_DOC",
+"PRIMER_APELLIDO",
+"SEGUNDO_APELLIDO",
+"VALOR_SUBSIDIO",
+"USUARIO  (Cédula del vendedor)  SII",
+"COD_OFICINA",
+"NOMBRES del beneficiario.",
+"APELLIDOS del beneficiario",
+"OFICINA DE PAGO  (pto de venta donde se paga) nombre de la oficina.",
+"pin",
+"consecutivo",
+"valor",
+"fecha",
+"hora",
+"nota",
+"GIRO_TIPO",
+"NOMBRE_PROVEEDOR",
+"informacion_remitente",
+"beneficiario",
+"agencia_origen",
+"agencia_destino",
+"agencia_pago",
+"login  identifación del cajero.",
+"NUMERO_COMPROBANTE",
+"estado",
+"proveedor",
+"1030700558",
+"20000",
+"740001",
+"1022371696",
+"50000",
+"52307294",
+"Unnamed: 0",
+"CORREO DEL CLIENTE",
+"DOCUMENTO CLIENTE",
+"NOMBRE CLIENTE",
+"SUB PRODUCTO",
+"COMPROBANTE INGRESO",
+"AGENCIA ",
+"CODIGO PRDUCTO",
+"FECHA TX2",
+"HORA TX3",
+"CODIGO VENDEDOR4",
+"CEDULA ASESORA5",
+"CODIGO DE ARRIENDO6",
+"TERMINAL7",
+"SPT8",
+"MUNICIPO9",
+"VALOR 10",
+"VALOR SIN IVA11",
+"ESTADO TX12",
+"ID TX13",
+"CJ",
+"CAJA",
+"COMPROBANTE",
+"FECHA COMPROBANTE ",
+"NOMBRE USUARIO",
+"EMISIÓN (APLICA PARA RASPATODO)",
+"PAGUE (APLICA PARA BALOTO)",
+"SERIE 2",
+"CODIGO BARRAS (LOTERÍAS-PROMOCIONALES-OTROS DISTRIBUIDORES)",
+"CODIGO DE SEGURIDAD14",
+"PIN15",
+"ENCARGADO",
+"PRODUCTO",
+"RUTA",
+"APLICATIVO",
+"CAMPOS DINAMICOS",
+"Unnamed: 3",
+"Unnamed: 4",
+"Unnamed: 5",
+"Unnamed: 6",
+"Unnamed: 7",
+"Unnamed: 8",
+"Unnamed: 9",
+"Unnamed: 10",
+"Unnamed: 11",
+"Unnamed: 12",
+"Unnamed: 13",
+"Unnamed: 14",
+"Unnamed: 20",
+"Unnamed: 21",
+"Unnamed: 22",
+"Unnamed: 23",
+"Unnamed: 24",
+"Unnamed: 25",
+"PREMIOS - PAGOS",
+"Unnamed: 27",
+"Unnamed: 28",
+"Unnamed: 29",
+"Unnamed: 30",
+"Unnamed: 31",
+"Unnamed: 32",
+"Unnamed: 33",
+"Unnamed: 34",
+"Unnamed: 35",
+"Unnamed: 36",
+"Unnamed: 37",
+"Unnamed: 38",
+"Unnamed: 39",
+"Unnamed: 40",
+"Unnamed: 41",
+"Unnamed: 42",
+"Unnamed: 43",
+"Unnamed: 44",
+"Unnamed: 45",
+"Unnamed: 46",
+"Unnamed: 47",
+"Unnamed: 48",
+"Unnamed: 49",
+"Unnamed: 50",
+"Unnamed: 51",
+"Unnamed: 52",
+"NOMBRE DISTRIBUIDOR",
+"FECHA_VENTA",
+"FECHA_SORTEO",
+"COD_USUARIO/ DEBE QUEDAR (CAJA PAGO)",
+"COD_LOTERIA",
+"NOM_LOTERÍA",
+"COD_SORTEO DEBE QUEDAR /(NUM_SORTEO)",
+"COD_BARRAS(COMPLETO)",
+"NUM_APOSTADO",
+"SERIE_APOSTADA",
+"NUM_FRACCIÓN",
+"SERIE2",
+"CANAL_VENTA (APP. FÍSICA, LÍNEA)",
+"TIPO_PREMIO",
+"TOTAL_PREMIO",
+"FECHA_PAGO",
+"HORA_PAGO",
+"DETALLE",
+"PROMOCIONALES PARA GELSA",
+"NOMBRE Y CODIGO DEL VENDEDOR ",
+"FECHA DE VENTA ",
+"CONCEPTO ",
+"RETENCIÓN ",
+"VENTA ",
+"IVA ",
+"BASE COMISIÓN ",
+"COMISIÓN NETA ",
+"RETENCION ",
+"COMISIÓN ",
+"ENTREGA ",
+"REPORTE",
+"Apertura caja sivem",
+"Id Transaccion",
+"Tipo Transaccion",
+"Codigo Oficina",
+"Usuario",
+"Tipo identificacion cliente",
+"Oficina",
+"Codigo de oficina ",
+"Zona ",
+"Terminal",
+"Usuario.1",
+"Canal ",
+"Codigo de arriendo",
+"Codigo de zona",
+"Nombres cliente",
+"Valor transaccion pesos",
+"Valor transaccion euros",
+"Valor transaccion dolares",
+"Fecha transaccion",
+"Nombre de la agencia ",
+"Hora transaccion",
+"Cajero",
+"NETO",
+"tipo transaccion",
+"ID TRANSACCION",
+"CRUCE CON SUPER",
+"CRUCE CON PSL",
