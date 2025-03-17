@@ -1,0 +1,25 @@
+📊 Columnas que aparecen SOLO en una hoja de 'Recargas' (sin 'Unnamed'):
+
+PIN (codigo autogenerado desde la app para recargar en efectivo en pto venta.)
+USUARIO (codigo asesora)
+CEDULA (asesora)
+TIPO_PIN
+CLIENTE (esta se cambia por Correo electrónico Cliente??  SI
+CODIGO_ARRIENDO
+SERIE1 (serie del tiquete)
+SERIE2  (serie del tiquete)
+NOMBRES  es el nombre de quien=??Asesora
+SPT (nombre de la spt concatenada??  SI
+CANAL de venta(tat, ambulante, y los demás definidos.)este canal no existe.
+TIPO (de contrato) que quiere decir esto? TAT, AMBULANTE Y OFICINAS)
+CANTIDAD
+COMISIÓN
+NUMERO_CONTROL
+NUMERO_CELULAR
+ID_TRANSACCION
+USUARIO
+EMPRESA
+PROVEEDOR
+PRODUCTO
+OPERADOR
+001

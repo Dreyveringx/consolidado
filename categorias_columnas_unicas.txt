@@ -1,0 +1,37 @@
+📊 Categorización de Columnas Únicas:
+
+📂 Identificación del Usuario:
+USUARIO (codigo asesora)
+CEDULA (asesora)
+NOMBRES  es el nombre de quien=??Asesora
+USUARIO
+
+📂 Información de la Transacción:
+PIN (codigo autogenerado desde la app para recargar en efectivo en pto venta.)
+TIPO_PIN
+CODIGO_ARRIENDO
+SERIE1 (serie del tiquete)
+SERIE2  (serie del tiquete)
+NUMERO_CONTROL
+NUMERO_CELULAR
+ID_TRANSACCION
+
+📂 Datos Comerciales y Producto:
+CANAL de venta(tat, ambulante, y los demás definidos.)este canal no existe.
+TIPO (de contrato) que quiere decir esto? TAT, AMBULANTE Y OFICINAS)
+CANTIDAD
+PRODUCTO
+OPERADOR
+
+📂 Información de la Empresa y Proveedor:
+SPT (nombre de la spt concatenada??  SI
+EMPRESA
+PROVEEDOR
+
+📂 Datos Económicos:
+COMISIÓN
+
+📂 Sin Categoría:
+CLIENTE (esta se cambia por Correo electrónico Cliente??  SI
+001
+
